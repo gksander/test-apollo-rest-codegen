@@ -1,0 +1,19 @@
+# Shim the @rest directive here.
+directive @rest(
+  path: String!
+  method: String
+  type: String!
+  endpoint: String
+) on FIELD
+
+# Then define all of your APIs types.
+type Person {
+  name: String
+  age: String
+  # ...
+}
+
+type Query {
+  # And define the "queries" that you'll be using to query your ReST API
+  person: Person!
+}
